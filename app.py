@@ -10,8 +10,8 @@ app = Flask(__name__)
 
 @app.route('/webhook', methods=['GET'])
 def webhook():
-    #response = requests.get('http://www.google.com')
-    #return response.text
+    # response = requests.get('http://www.google.com')
+    # return response.text
     return 'H'
 
 
