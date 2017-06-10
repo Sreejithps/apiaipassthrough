@@ -19,6 +19,8 @@ import requests
 
 # Flask app should start in global layout
 app = Flask(__name__)
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 
 
 @app.route('/webhook', methods=['GET'])
