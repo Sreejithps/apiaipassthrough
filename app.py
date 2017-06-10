@@ -22,7 +22,6 @@ app.logger.setLevel(logging.ERROR)
 def webhook():
     if request.headers['apikey'] == 'a3be1e29-8d95-474c-9ae8-faa88ade48b4':
         response = requests.get('http://noecommercews1098.cloudapp.net/api.ai/webhook.ashx', data = request.data)
-        print('JSON Body{}'.format(request.data))
         return response.text
     else:
         return 'foo'
