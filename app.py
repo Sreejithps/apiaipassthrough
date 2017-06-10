@@ -18,9 +18,9 @@ app.logger.setLevel(logging.ERROR)
 
 
 
-@app.route('/webhook', methods=['GET'])
+@app.route('/webhook', methods=['POST'])
 def webhook():
-    response = requests.get('http://www.google.com')
+    response = requests.get('http://noecommercews1098.cloudapp.net/api/stats?id=productcount')
     return response.text
 
 
