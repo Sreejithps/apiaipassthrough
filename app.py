@@ -26,7 +26,6 @@ def webhook():
     response = requests.get('http://www.google.com')
     return response.text
 
-
 def makeWebhookResult(data):
     query = data.get('query')
     if query is None:
