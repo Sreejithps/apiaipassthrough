@@ -20,9 +20,11 @@ app.logger.setLevel(logging.ERROR)
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    response = requests.get('http://noecommercews1098.cloudapp.net/api.ai/webhook.ashx')
-    return response.text
-
+    if request.headers['apikey'] == 'a3be1e29-8d95-474c-9ae8-faa88ade48b4':
+        response = requests.get('http://noecommercews1098.cloudapp.net/api.ai/webhook.ashx')
+        return response.text
+    else:
+        return 'foo'
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
