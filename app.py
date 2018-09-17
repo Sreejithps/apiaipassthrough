@@ -20,6 +20,7 @@ app.logger.setLevel(logging.ERROR)
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
+    print("Got request")
     if request.headers['apikey'] == 'a3be1e29-8d95-474c-9ae8-faa88ade48b4':
         return "Hello how are you?"
     else:
@@ -30,4 +31,4 @@ if __name__ == '__main__':
 
     print("Starting app on port %d" % port)
 
-    app.run(debug=False, port=port, host='0.0.0.0')
+    app.run(debug=False, port=5000, host='0.0.0.0')
