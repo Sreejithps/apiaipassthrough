@@ -21,7 +21,9 @@ app.logger.setLevel(logging.ERROR)
 @app.route('/webhook', methods=['GET'])
 def webhook():
     if request.headers['apikey'] == 'a3be1e29-8d95-474c-9ae8-faa88ade48b4':
-        return 'Hello how are you?'
+        return "Hello how are you?"
+    else:
+        return "You are not allowed"
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
