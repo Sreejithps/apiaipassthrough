@@ -18,7 +18,7 @@ app.logger.setLevel(logging.ERROR)
 
 
 
-@app.route('/webhook', methods=['POST'])
+@app.route('/webhook', methods=['GET'])
 def webhook():
     if request.headers['apikey'] == 'a3be1e29-8d95-474c-9ae8-faa88ade48b4':
         return 'Hello how are you?'
