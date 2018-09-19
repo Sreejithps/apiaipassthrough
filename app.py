@@ -9,6 +9,7 @@ from flask import make_response
 import requests
 import logging
 import sys
+import xlrd
 
 # Flask app should start in global layout
 app = Flask(__name__)
